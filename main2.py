@@ -122,7 +122,7 @@ def make_call(phone_number, user_data, question):
 # Streamlit App configuration
 st.title('Call Dashboard')
 st.sidebar.title('Navigation')
-options = ['Single Call', 'Interview Details']
+options = ['Single Call']
 choice = st.sidebar.selectbox('Select a section', options)
 
 if choice == 'Single Call':
@@ -136,13 +136,4 @@ if choice == 'Single Call':
         st.write(message)
         st.json(response)
 
-elif choice == 'Interview Details':
-    st.header('Interview Details')
-    name = st.text_input('Enter your name')
-    user_id = st.text_input('Enter your ID')
-    if st.button('Get Details'):
-        user_data = fetch_user_data()
-        if user_data:
-            st.write("\n".join([f"{key}: {value}" for key, value in user_data.items()]))
-        else:
-            st.error("Failed to fetch data.")
+
