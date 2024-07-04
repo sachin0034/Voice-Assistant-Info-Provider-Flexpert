@@ -68,7 +68,7 @@ def make_call(phone_number, user_data, question):
 
     system_prompt = f"""
     {user_prompt}
-     you are the customer support at AT&T
+     you are the customer support at Flexpert
     To provide user with the best assistance with answers of their questions:
     - First ask, let me know how could i assist you?
     - After that provide them details through given {dataset} only.
